@@ -4,7 +4,7 @@ const pool = require("./db");
 
 pool.query("SELECT NOW()", (err) => {
     if (err) {
-        console.log("Database connection failed");
+        console.log("Database connection failed:", err.message);
     } else {
         console.log("Database connected!");
     }
